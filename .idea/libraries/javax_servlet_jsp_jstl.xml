@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="javax.servlet.jsp.jstl">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/javax.servlet.jsp.jstl.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/jstl-impl-1.2.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/mysql-connector-java-5.0.4-bin.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/SmartUpload.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

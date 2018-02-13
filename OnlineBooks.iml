@@ -71,5 +71,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
   </component>
 </module>

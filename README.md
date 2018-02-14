@@ -1,2 +1,2 @@
 # OnlineBooks
-网上书城java项目
+JAVA图书管理系统

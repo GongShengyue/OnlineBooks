@@ -22,12 +22,13 @@ public class AdminServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "/pages/errors.jsp";//定义错误页面
         String status = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/")+1);
+        System.out.println(status);
         if(status != null){
             if("login".equals(status)){
                 path = this.login(request);
             }
         }
-
+        System.out.println(path);
         request.getRequestDispatcher(path).forward(request,response);
     }
     public String login(HttpServletRequest request) {
@@ -36,6 +37,8 @@ public class AdminServlet extends HttpServlet {
         //取得页面中传递过来的数据
         String aid = request.getParameter("aid");
         String password = request.getParameter("password");
+        System.out.println(aid);
+        System.out.println(password);
         //判断数据是否为空
         if(ValidateUtils.validateEmpty(aid) && ValidateUtils.validateEmpty(password)){//表示数据存在
             Admin vo = new Admin();
@@ -59,8 +62,9 @@ public class AdminServlet extends HttpServlet {
 
         else{
             msg = "data should not be null";
-            url = "/login.jsp";
+            url = "/kong.jsp";
         }
+        System.out.println("登录结果："+msg);
         request.setAttribute("msg",msg);
         request.setAttribute("url",url);
         System.out.println(msg);

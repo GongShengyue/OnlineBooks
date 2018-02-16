@@ -19,7 +19,7 @@ public class AdminDAOImpl extends AbstractDAOImpl implements IAdminDAO{
     @Override
     public boolean findLogin(Admin vo) throws SQLException {
         boolean flag = false;
-        String sql = "SELECT lastdate FROM admin WHERE  aid=? AND PASSWORD=? AND flag=1";
+        String sql = "SELECT lastdate FROM admin WHERE  aid=? AND password=? AND flag=1";
         super.pstmt = super.conn.prepareStatement(sql);
         super.pstmt.setString(1,vo.getAid());
         super.pstmt.setString(2,vo.getPassword());
@@ -29,7 +29,7 @@ public class AdminDAOImpl extends AbstractDAOImpl implements IAdminDAO{
             vo.setLastdate(rs.getTimestamp(1));//这行是啥？？
         }
 
-        return false;
+        return flag;
     }
 
     @Override

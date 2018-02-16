@@ -24,9 +24,13 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
+
+
     public Connection getConn(){
         return this.conn;
     }
+
+
     public void close(){
         if(this.conn!=null) {
             try {

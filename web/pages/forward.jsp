@@ -13,7 +13,7 @@
 </head>
 <body>
 <script type="text/javascript">
-  	window.alert("${msg}") ;
+  	window.alert("${msg}") ;//使用了EL表达式
     window.location = "<%=basePath%>${url}" ;
 </script>
 </body>

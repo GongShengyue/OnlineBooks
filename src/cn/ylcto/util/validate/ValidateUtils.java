@@ -7,6 +7,6 @@ public class ValidateUtils {
             return false;
         }
 
-        return false;
+        return true;//很关键！！
     }
 }

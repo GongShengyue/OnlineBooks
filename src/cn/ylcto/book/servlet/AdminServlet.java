@@ -37,8 +37,8 @@ public class AdminServlet extends HttpServlet {
         //取得页面中传递过来的数据
         String aid = request.getParameter("aid");
         String password = request.getParameter("password");
-        System.out.println(aid);
-        System.out.println(password);
+        //System.out.println(aid);
+        //System.out.println(password);
         //判断数据是否为空
         if(ValidateUtils.validateEmpty(aid) && ValidateUtils.validateEmpty(password)){//表示数据存在
             Admin vo = new Admin();

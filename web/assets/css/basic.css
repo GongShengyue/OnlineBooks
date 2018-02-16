@@ -1,0 +1,247 @@
+
+/*==============================================
+    BASIC  STYLES    
+    =============================================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height:25px;
+}
+
+#wrapper {
+    width: 100%;
+    background: #202020;
+}
+
+#page-wrapper {
+    padding: 15px 15px;
+    min-height: 100px;
+    background: #F3F3F3;
+}
+
+#page-inner {
+    width: 100%;
+    margin: 10px 20px 10px 0px;
+    background-color: #fff!important;
+    padding: 10px;
+    min-height: 800px;
+}
+
+.page-head-line {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00CA79;
+    margin-bottom: 10px;
+}
+
+.page-subhead-line {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-style:italic;
+    margin-bottom:30px;
+    border-bottom:1px dashed #00CA79;
+
+}
+
+.copyrights{
+	text-indent:-9999px;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+/*==============================================
+    MENU STYLES    
+    =============================================*/
+
+
+.navbar-cls-top .navbar-brand {
+    color: #fff;
+    background: #202020;
+    width: 260px;
+    text-align: center;
+    height: 75px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    padding-top: 25px;
+    text-transform:uppercase;
+}
+
+.header-right {
+    color: #fff;
+    padding: 15px 50px 5px 50px;
+    float: right;
+    font-size: 16px;
+}
+
+.navbar-cls-top .navbar-brand:hover {
+    background: #202020;
+    color: #fff;
+}
+
+.user-img-div {
+    min-height: 140px;
+    padding: 20px;
+    background-color: #4380B8;
+}
+
+    .user-img-div img {
+        max-height: 60px;
+    }
+
+    .user-img-div .inner-text {
+        text-align: right;
+        position: relative;
+        color: #fff;
+        font-weight: 800;
+        line-height: 25px;
+    }
+
+.active-menu {
+    background-color: #00CA79!important;
+}
+.active-menu-top {
+    background-color: #000!important;
+}
+
+.arrow {
+    float: right;
+}
+
+.fa.arrow:before {
+    content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+
+.nav-second-level li,
+.nav-third-level li {
+    border-bottom: none !important;
+}
+
+    .nav-second-level li a {
+        padding-left: 37px;
+    }
+
+    .nav-third-level li a {
+        padding-left: 55px;
+    }
+
+.sidebar-collapse, .sidebar-collapse .nav {
+    background: none;
+}
+
+    .sidebar-collapse .nav {
+        padding: 0;
+    }
+
+        .sidebar-collapse .nav > li > a {
+            color: #fff;
+            background: #202020;
+            text-shadow: none;
+            padding: 15px 40px;
+            border-bottom: 1px solid #2F2E31;
+        }
+
+    .sidebar-collapse > .nav > li > a {
+        padding: 15px 10px;
+    }
+
+    .sidebar-collapse .nav > li > a:hover,
+    .sidebar-collapse .nav > li > a:focus {
+        background: #0A0A0A;
+        outline: 0;
+    }
+
+
+
+.nav-second-level > li:last-child > a:after,
+.nav-third-level > li:last-child > a:after {
+    height: 50%;
+}
+
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before {
+    left: 40px;
+}
+
+.navbar-side {
+    border: none;
+    background-color: #202020;
+}
+
+.navbar-cls-top {
+    background: #00CA79;
+    border-bottom: none;
+}
+
+
+.navbar-default {
+    border: 0px solid black;
+}
+
+.navbar-header {
+    background: #000000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #00CA79;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFF;
+    }
+
+.nav > li > a > i {
+    margin-right: 10px;
+}
+/*==============================================
+    FOOTER  STYLES    
+    =============================================*/
+#footer-sec {
+    background-color:#000;
+    padding:20px 50px;
+    color:#fff;
+    font-size:12px;
+}
+
+    #footer-sec a {
+        color:#fff;
+    }
+    #footer-sec a:hover,a:focus {
+        color:#fff;
+        text-decoration:none;
+    }
+/*==============================================
+    MEDIA QUERIES     
+    =============================================*/
+
+@media (min-width:768px) {
+    #page-wrapper {
+        margin: 0 0 0 260px;
+        padding: 15px 30px;
+        min-height: 300px;
+    }
+
+
+    .navbar-side {
+        z-index: 1;
+        position: absolute;
+        width: 260px;
+    }
+
+    .navbar {
+        border-radius: 0px;
+    }
+}

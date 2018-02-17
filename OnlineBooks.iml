@@ -75,5 +75,14 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Documents/java学习/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

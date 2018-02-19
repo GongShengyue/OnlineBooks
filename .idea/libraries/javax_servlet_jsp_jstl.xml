@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/javax.servlet.jsp.jstl.jar!/" />
       <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/jstl-impl-1.2.2.jar!/" />
       <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/SmartUpload.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/java学习/onlineBooks/项目开发包包/libs/standard.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/java学习/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

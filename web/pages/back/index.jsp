@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.ylcto.cn/c" %>
 <%--
   Created by IntelliJ IDEA.
   User: gsy
@@ -50,7 +51,9 @@
             <img src="assets/img/user.png" class="img-thumbnail" />
 
             <div class="inner-text">
-              管理员:
+              管理员:<c:if test = "${aid != null}">
+                    ${aid}
+                    </c:if>
               <br />
               <small>上次登录日期:</small>
             </div>

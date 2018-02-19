@@ -74,7 +74,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -84,5 +83,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
   </component>
 </module>

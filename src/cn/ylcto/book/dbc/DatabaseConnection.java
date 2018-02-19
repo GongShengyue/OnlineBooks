@@ -1,6 +1,5 @@
 package cn.ylcto.book.dbc;
 import java.sql.*;
-import com.mysql.jdbc.Driver;
 
 public class DatabaseConnection {
     private static final String DBDRIVER = "com.mysql.jdbc.Driver";

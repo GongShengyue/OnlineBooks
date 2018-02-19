@@ -7,6 +7,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="OnlineBooks" />
         </element>
+        <element id="directory" name="lib" />
       </element>
     </root>
   </artifact>

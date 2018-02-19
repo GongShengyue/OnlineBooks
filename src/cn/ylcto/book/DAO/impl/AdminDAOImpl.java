@@ -8,6 +8,8 @@ import cn.ylcto.util.test.AbstractDAOImpl;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -30,6 +32,16 @@ public class AdminDAOImpl extends AbstractDAOImpl implements IAdminDAO{
         }
 
         return flag;
+    }
+
+    @Override
+    public boolean doUpdateByLastDate(String aid) throws SQLException {
+        String sql = "UPDATE admin SET lastdate=?WHERE aid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        //登录成功后不直接使用当前日前为最后一次登录日期
+        super.pstmt.setTimestamp(1,new Timestamp(new Date().getTime()));
+        super.pstmt.setString(2,aid);
+        return super.pstmt.executeUpdate()>0;
     }
 
     @Override

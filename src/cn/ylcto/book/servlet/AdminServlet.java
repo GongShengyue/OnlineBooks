@@ -43,10 +43,11 @@ public class AdminServlet extends HttpServlet {
             Admin vo = new Admin();
             vo.setAid(aid);//取得参数
             vo.setPassword(new MD5Code().getMD5ofStr(password+aid));//需要加盐处理
-            System.out.println(vo.getPassword());//用于测试输出加盐密码
+            //System.out.println(vo.getPassword());//用于测试输出加盐密码
             try{
                 if(ServiceFactory.getIAdminServiceInstance().login(vo)) {
                     request.getSession().setAttribute("aid",aid);//保存aid
+                    request.getSession().setAttribute("lastdate",vo.getLastdate());
                     msg = "登录成功";
                     url = "/pages/back/index.jsp";
                 }else{
@@ -63,7 +64,7 @@ public class AdminServlet extends HttpServlet {
             msg = "数据不能为空";
             url = "/kong.jsp";
         }
-
+        System.out.println(request.getSession().getAttribute("lastdate"));
         request.setAttribute("msg",msg);
         request.setAttribute("url",url);
         return "/pages/forward.jsp";

@@ -3,6 +3,7 @@ package cn.ylcto.book.DAO;
 import cn.ylcto.book.Admin;
 
 import java.sql.SQLException;
+import java.util.Date;
 
 //定义IAdminDAO借口并继承IDAO借口
 public interface IAdminDAO extends IDAO<String,Admin> {
@@ -13,5 +14,13 @@ public interface IAdminDAO extends IDAO<String,Admin> {
      * @throws SQLException
      */
     public boolean findLogin(Admin vo)throws SQLException;
+
+    /**
+     * 实现用户数据更新操作
+     * @param aid 表示要更新的主键
+     * @return
+     * @throws SQLException
+     */
+    public boolean doUpdateByLastDate(String aid) throws SQLException;
 
 }

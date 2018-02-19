@@ -10,7 +10,7 @@ $(function(){
             },
             password:{
                 required:true,
-                rangelength:[3,12]
+                rangelength:[0,12]
             }
         }
     })

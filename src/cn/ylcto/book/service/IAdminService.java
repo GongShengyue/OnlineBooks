@@ -11,4 +11,12 @@ public interface IAdminService {
      * @throws Exception
      */
     public boolean login(Admin vo) throws Exception;
+
+    /**
+     * 更新最后一次登录日期
+     * @param aid
+     * @return
+     * @throws Exception
+     */
+    public boolean updateByLastDate(String aid) throws Exception;
 }

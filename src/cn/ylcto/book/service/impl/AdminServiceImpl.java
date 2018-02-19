@@ -11,7 +11,11 @@ public class AdminServiceImpl implements IAdminService{
     @Override
     public boolean login(Admin vo) throws Exception {
         try{
-            return DAOFactory.getAdminDAOInstance(this.dbc.getConn()).findLogin(vo);
+            //如果登录成功
+            if (DAOFactory.getAdminDAOInstance(this.dbc.getConn()).findLogin(vo)) {
+                return DAOFactory.getAdminDAOInstance(this.dbc.getConn()).doUpdateByLastDate(vo.getAid());
+            }
+            return false;
 
         }
         catch (Exception e){
@@ -20,5 +24,10 @@ public class AdminServiceImpl implements IAdminService{
             this.dbc.close();
         }
 
+    }
+
+    @Override
+    public boolean updateByLastDate(String aid) throws Exception {
+        return false;
     }
 }

@@ -14,6 +14,12 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="validate/js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="validate/js/additional-methods.min.js" ></script>
+    <script type="text/javascript" src="validate/js/jquery.metadata.js" ></script>
+    <script type="text/javascript" src="validate/js/jquery.validate.min.js" ></script>
+    <script type="text/javascript" src="validate/js/Message_zh_CN.js"></script>
+    <script type="text/javascript" src="validate/login.js"></script>
 </head>
 <body style="background-color: #E2E2E2;">
 <div class="container">
@@ -27,7 +33,7 @@
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
             <div class="panel-body">
-                <form role="form" action="<%=basePath%>pages/back/AdminServlet/login" method="get">
+                <form id="loginForm" action="<%=basePath%>pages/back/AdminServlet/login" method="get">
                     <hr />
                     <h5>Enter Details to Login</h5>
                     <br />

@@ -1,6 +1,6 @@
 package cn.ylcto.book.servlet;
 
-import cn.ylcto.book.Admin;
+import cn.ylcto.book.vo.Admin;
 import cn.ylcto.book.factory.ServiceFactory;
 import cn.ylcto.util.MD5Code;
 import cn.ylcto.util.validate.ValidateUtils;
@@ -47,6 +47,7 @@ public class AdminServlet extends HttpServlet {
             try{
                 if(ServiceFactory.getIAdminServiceInstance().login(vo)) {
                     request.getSession().setAttribute("aid",aid);//保存aid
+
                     request.getSession().setAttribute("lastdate",vo.getLastdate());
                     msg = "登录成功";
                     url = "/pages/back/index.jsp";
@@ -64,7 +65,6 @@ public class AdminServlet extends HttpServlet {
             msg = "数据不能为空";
             url = "/kong.jsp";
         }
-        System.out.println(request.getSession().getAttribute("lastdate"));
         request.setAttribute("msg",msg);
         request.setAttribute("url",url);
         return "/pages/forward.jsp";

@@ -1,7 +1,6 @@
 package cn.ylcto.book.service.impl;
 
-import cn.ylcto.book.Admin;
-import cn.ylcto.book.DAO.IAdminDAO;
+import cn.ylcto.book.vo.Admin;
 import cn.ylcto.book.dbc.DatabaseConnection;
 import cn.ylcto.book.factory.DAOFactory;
 import cn.ylcto.book.service.IAdminService;

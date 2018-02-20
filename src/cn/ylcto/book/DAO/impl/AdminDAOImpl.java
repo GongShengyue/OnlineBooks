@@ -1,8 +1,7 @@
 package cn.ylcto.book.DAO.impl;
 
-import cn.ylcto.book.Admin;
+import cn.ylcto.book.vo.Admin;
 import cn.ylcto.book.DAO.IAdminDAO;
-import cn.ylcto.book.DAO.IDAO;
 import cn.ylcto.util.test.AbstractDAOImpl;
 
 import java.sql.Connection;

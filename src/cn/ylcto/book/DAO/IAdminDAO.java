@@ -1,9 +1,8 @@
 package cn.ylcto.book.DAO;
 
-import cn.ylcto.book.Admin;
+import cn.ylcto.book.vo.Admin;
 
 import java.sql.SQLException;
-import java.util.Date;
 
 //定义IAdminDAO借口并继承IDAO借口
 public interface IAdminDAO extends IDAO<String,Admin> {

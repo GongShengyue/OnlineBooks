@@ -56,9 +56,7 @@
                         </c:if>
                             <br />
                             <small>上次登录日期:
-                            <c:if test= "${lastdate != null}">
-                                ${lastdate}
-                            </c:if>
+                            <%=request.getSession().getAttribute("lastdate").toString()%>
                             </small>
                         </div>
                     </div>

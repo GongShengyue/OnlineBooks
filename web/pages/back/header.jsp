@@ -48,7 +48,7 @@
                 <a href="#"><i class="fa fa-desktop "></i>用户管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#"><i class="fa fa-toggle-on"></i>用户录入</a>
+                        <a href="/pages/back/member/member_insert.jsp"><i class="fa fa-toggle-on"></i>用户录入</a>
                     </li>
                 </ul>
             </li>

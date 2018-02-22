@@ -32,10 +32,16 @@
   <!-- 此处编写内容  -->
   <div id="page-wrapper">
     <div id="page-inner">
+    <%--编写数据增加表单--%>
 
 
-    </div>
-  </div>
+    </form>
+</div>
+
+
+
+</div>
+</div>
 </div>
 
 

@@ -33,7 +33,7 @@
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
             <div class="panel-body">
-                <form id="loginForm" action="<%=basePath%>pages/back/AdminServlet/login" method="get">
+                <form id="loginForm" action="<%=basePath%>pages/back/AdminServlet/login" method="post">
                     <hr />
                     <h5>Enter Details to Login</h5>
                     <br />
@@ -48,7 +48,7 @@
 
                     <button type="submit" class="btn btn-primary col-md-offset-7">登录</button>
                     <hr />
-                    忘记密码 ? <a href="#" >点击这里 </a> 或者联系QQ： <a href="#">111222333</a>
+                    忘记密码 ? <a href="#" >点击这里 </a> 或者联系QQ： <a href="#">1007691667</a>
                 </form>
             </div>
 

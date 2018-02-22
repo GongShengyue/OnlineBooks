@@ -1,5 +1,6 @@
 package cn.ylcto.book.servlet;
 
+import cn.ylcto.book.factory.ServiceFactory;
 import cn.ylcto.book.vo.Member;
 import cn.ylcto.util.validate.ValidateUtils;
 
@@ -15,7 +16,6 @@ public class MemberServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "/pages/errors.jsp";//定义错误页面
@@ -26,31 +26,44 @@ public class MemberServlet extends HttpServlet {
                path = this.insert(request);
             }
         }
-
+        System.out.println(status);
         request.getRequestDispatcher(path).forward(request, response);
     }
+
     public String insert(HttpServletRequest request){
         String url ="";
         String msg ="";
         //接收数据
-        String mid = request.getParameter("aid");
+        String mid = request.getParameter("mid");
         String name = request.getParameter("name");
         Integer age = Integer.parseInt(request.getParameter("age"));
         Integer sex = Integer.parseInt(request.getParameter("sex"));
         String phone = request.getParameter("phone");
         //验证数据是否为空
-        if(ValidateUtils.validateEmpty(mid)&&
-                ValidateUtils.validateEmpty(name)&&
-                ValidateUtils.validateEmpty(phone)){
+        System.out.println(mid);
+        if(ValidateUtils.validateEmpty(mid)&&ValidateUtils.validateEmpty(name)&& ValidateUtils.validateEmpty(phone)){
             Member vo = new Member();
             vo.setMid(mid);
             vo.setName(name);
             vo.setSex(sex);
             vo.setAge(age);
             vo.setPhone(phone);
+                try {
+                    if (ServiceFactory.getIMemberServiceInstance().insert(vo)){
+                        url = "/pages/back/member/member_insert.jsp";
+                        msg = "用户数据增加成功!";
+                    }else{
+                        url = "/pages/back/member/member_insert.jsp";
+                        msg = "用户数据增加失败!";
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
 
 
-        }else{
+        else{
             url = "/pages/back/member/member_insert.jsp";
             msg = "数据不能为空";
         }

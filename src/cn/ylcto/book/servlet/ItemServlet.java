@@ -46,6 +46,8 @@ public class ItemServlet extends HttpServlet {
         String url = "";//表示跳转路径
         String name = request.getParameter("name");
         String note = request.getParameter("note");
+        System.out.println(name);
+        System.out.println(note);
         //数据验证
         if (ValidateUtils.validateEmpty(name) && ValidateUtils.validateEmpty(note)) {//表示数据存在
             Item vo = new Item();
@@ -54,7 +56,7 @@ public class ItemServlet extends HttpServlet {
             try {
                 if (ServiceFactory.getIItemServiceInstance().insert(vo)) {
                     msg = "数据增加成功";
-                    url = "/pages/back/item/item_insert.jsp";
+                    url = "/pages/back/member/item_insert.jsp";
 
                 }
             else {
@@ -69,7 +71,7 @@ public class ItemServlet extends HttpServlet {
 
         }else{
             msg = "数据不能为空";
-            url = "/pages/back/item/item_insert.jsp";
+            url = "/pages/back/member/item_insert.jsp";
         }
         request.setAttribute("msg",msg);
         request.setAttribute("url",url);

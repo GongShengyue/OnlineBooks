@@ -18,6 +18,9 @@ $(function(){
             },
             phone:{
                 required:true
+            },
+            note:{
+                required:true;
             }
 
         }

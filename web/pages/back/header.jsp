@@ -38,7 +38,7 @@
             </li>
 
             <li>
-                <a class="active-menu" href="index.html"><i class="fa fa-dashboard "></i>导航</a>
+                <a class="active-menu" href="pages/index.jsp"><i class="fa fa-dashboard "></i>导航</a>
             </li>
             <!--用户信息-->
             <li>
@@ -54,11 +54,11 @@
                 <a href="#"><i class="fa fa-desktop "></i>分类管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="/pages/back/member/member_insert.jsp"><i class="fa fa-toggle-on"></i>增加分类</a>
+                        <a href="/pages/back/member/item_insert.jsp"><i class="fa fa-toggle-on"></i>增加分类</a>
                     </li>
-                    <%--<li>
+                    <li>
                         <a href="/pages/back/item/ItemServlet/list"><i class="fa fa-flash "></i>列表分类</a>
-                    </li>--%>
+                    </li>
                 </ul>
             </li>
             <!--图书信息-->

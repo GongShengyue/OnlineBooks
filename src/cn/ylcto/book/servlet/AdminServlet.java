@@ -50,7 +50,7 @@ public class AdminServlet extends HttpServlet {
 
                     request.getSession().setAttribute("lastdate",vo.getLastdate());
                     msg = "登录成功";
-                    url = "/pages/back/index.jsp";
+                    url = "/pages/index.jsp";
                 }else{
                     msg = "登录失败，错误的ID或密码";
                     url = "/login.jsp";

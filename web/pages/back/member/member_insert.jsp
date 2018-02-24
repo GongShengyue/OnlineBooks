@@ -32,6 +32,14 @@
     <!-- 此处编写内容  -->
     <div id="page-wrapper">
         <div id="page-inner">
+            <div class="col-md-12">
+                <div class="col-md-6 col-md-offset-4">
+                    <h1 class="h1">增加用户操作</h1>
+                </div>
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
             <%--编写增加数据表单 --%>
                 <form action="<%=basePath%>pages/back/MemberServlet/insert" method="post" class="form-horizontal" id="insertForm">
                     <%--编号--%>

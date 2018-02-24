@@ -1,8 +1,10 @@
 package cn.ylcto.book.factory;
 
 import cn.ylcto.book.service.IAdminService;
+import cn.ylcto.book.service.IItemService;
 import cn.ylcto.book.service.IMemberService;
 import cn.ylcto.book.service.impl.AdminServiceImpl;
+import cn.ylcto.book.service.impl.ItemServiceImpl;
 import cn.ylcto.book.service.impl.MemberServiceImpl;
 import cn.ylcto.book.servlet.AdminServlet;
 
@@ -12,6 +14,7 @@ public class ServiceFactory {
     return new AdminServiceImpl();
     }
     public static IMemberService getIMemberServiceInstance(){return new MemberServiceImpl();}
+    public static IItemService getIItemServiceInstance(){return new ItemServiceImpl(); }
 
 
 }

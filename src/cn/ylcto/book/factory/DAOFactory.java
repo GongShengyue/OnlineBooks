@@ -1,8 +1,10 @@
 package cn.ylcto.book.factory;
 
 import cn.ylcto.book.DAO.IAdminDAO;
+import cn.ylcto.book.DAO.IItemDAO;
 import cn.ylcto.book.DAO.IMemberDao;
 import cn.ylcto.book.DAO.impl.AdminDAOImpl;
+import cn.ylcto.book.DAO.impl.ItemDAOImpl;
 import cn.ylcto.book.DAO.impl.MemberDaoImpl;
 
 import java.sql.Connection;
@@ -13,5 +15,8 @@ public class DAOFactory {
     }
     public static IMemberDao getIMemberDAOInstance(Connection conn){
         return new MemberDaoImpl(conn);
+    }
+    public static IItemDAO getIItemDAOInstance(Connection conn){
+        return new ItemDAOImpl(conn);
     }
 }

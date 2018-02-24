@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-@WebFilter(filterName = "AdminLoginFilter",urlPatterns = "/pages/back/index.jsp")
+@WebFilter(filterName = "AdminLoginFilter",urlPatterns = {"/pages/back/member","/pages/back/item","/pages/index.jsp"})
 public class AdminLoginFilter implements Filter{
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

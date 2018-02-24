@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gsy
-  Date: 2018/2/20
-  Time: 21:52
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://www.ylcto.cn/c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -15,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="pages/back/index.jsp">优乐图书管理系统</a>
+        <a class="navbar-brand" href="/pages/index.jsp">优乐图书管理系统</a>
     </div>
     <!--顶部-->
     <div class="header-right">
@@ -31,11 +24,15 @@
                     <img src="assets/img/user.png" class="img-thumbnail" />
 
                     <div class="inner-text">
-                        管理员:<c:if test = "${aid != null}">
+                        管理员: <c:if test="${aid != null}">
                         ${aid}
                     </c:if>
                         <br />
-                        <small>上次登录日期:</small>
+                        <small>上次登录日期:
+                            <c:if test="${lastdate != null}">
+                                ${lastdate}
+                            </c:if>
+                        </small>
                     </div>
                 </div>
             </li>
@@ -52,15 +49,27 @@
                     </li>
                 </ul>
             </li>
+            <!--分类信息-->
+            <li>
+                <a href="#"><i class="fa fa-desktop "></i>分类管理 <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="/pages/back/member/member_insert.jsp"><i class="fa fa-toggle-on"></i>增加分类</a>
+                    </li>
+                    <%--<li>
+                        <a href="/pages/back/item/ItemServlet/list"><i class="fa fa-flash "></i>列表分类</a>
+                    </li>--%>
+                </ul>
+            </li>
             <!--图书信息-->
             <li>
                 <a href="#"><i class="fa fa-yelp "></i>图书管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="invoice.html"><i class="fa fa-coffee"></i>增加图书</a>
+                        <a href="/pages/back/books/BooksServlet/insertPro"><i class="fa fa-coffee"></i>增加图书</a>
                     </li>
                     <li>
-                        <a href="pricing.html"><i class="fa fa-flash "></i>图书列表</a>
+                        <a href="/pages/back/books/BooksServlet/listSplit"><i class="fa fa-flash "></i>图书列表</a>
                     </li>
                 </ul>
             </li>
@@ -69,11 +78,13 @@
                 <a href="#"><i class="fa fa-bicycle "></i>借书登记 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="form.html"><i class="fa fa-desktop "></i>借书信息录入 </a>
+                        <a href="/pages/back/lenbook/LenbookServlet/insertPro"><i class="fa fa-desktop "></i>借书信息录入 </a>
+                    </li>
+                    <li>
+                        <a href="/pages/back/lenbook/LenbookServlet/listSplit"><i class="fa fa-desktop "></i>借书信息列表 </a>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
 </nav>
-

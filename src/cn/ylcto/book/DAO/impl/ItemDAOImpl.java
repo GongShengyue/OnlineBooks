@@ -7,6 +7,7 @@ import cn.ylcto.util.test.AbstractDAOImpl;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -52,7 +53,18 @@ public class ItemDAOImpl extends AbstractDAOImpl implements IItemDAO {
 
     @Override
     public List<Item> findAll() throws SQLException {
-        return null;
+        List<Item> all = new ArrayList<Item>();
+        String sql = "SELECT iid,name,note FROM item";
+        super.pstmt = super.conn.prepareStatement(sql);
+        ResultSet rs = super.pstmt.executeQuery();
+        if(rs.next()){
+           Item vo=new Item();
+            vo.setIid(rs.getInt(1));
+            vo.setName(rs.getString(2));
+            vo.setNote(rs.getString(3));
+            all.add(vo);
+        }
+        return all;
     }
 
     @Override

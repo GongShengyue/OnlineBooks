@@ -57,7 +57,7 @@
                         <a href="/pages/back/member/item_insert.jsp"><i class="fa fa-toggle-on"></i>增加分类</a>
                     </li>
                     <li>
-                        <a href="/pages/back/item/ItemServlet/list"><i class="fa fa-flash "></i>列表分类</a>
+                        <a href="/pages/back/ItemServlet/list"><i class="fa fa-flash "></i>列表分类</a>
                     </li>
                 </ul>
             </li>

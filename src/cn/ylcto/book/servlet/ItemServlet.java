@@ -22,6 +22,7 @@ public class ItemServlet extends HttpServlet {
         String path = "/pages/errors.jsp";//定义错误页面
         String status = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1);
         //表示截取的最后一个字符串
+        System.out.println(status);
         if (status != null) {
             if ("insert".equals(status)) {
                 try {
@@ -29,10 +30,22 @@ public class ItemServlet extends HttpServlet {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }else if("list".equals(status)){
+                path = this.list(request);
             }
         }
 
         request.getRequestDispatcher(path).forward(request, response);
+    }
+
+    public String list(HttpServletRequest request){
+        try {
+            request.setAttribute("allItems",ServiceFactory.getIItemServiceInstance().list());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "/pages/back/member/item_list.jsp";
     }
 
     /**

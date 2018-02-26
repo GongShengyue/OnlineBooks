@@ -57,7 +57,7 @@ public class ItemDAOImpl extends AbstractDAOImpl implements IItemDAO {
         String sql = "SELECT iid,name,note FROM item";
         super.pstmt = super.conn.prepareStatement(sql);
         ResultSet rs = super.pstmt.executeQuery();
-        if(rs.next()){
+        while(rs.next()){
            Item vo=new Item();
             vo.setIid(rs.getInt(1));
             vo.setName(rs.getString(2));

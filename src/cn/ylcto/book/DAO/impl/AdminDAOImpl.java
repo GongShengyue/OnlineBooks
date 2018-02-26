@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -65,7 +66,21 @@ public class AdminDAOImpl extends AbstractDAOImpl implements IAdminDAO{
 
     @Override
     public List<Admin> findAll() throws SQLException {
-        return null;
+        List<Admin> all = new ArrayList<Admin>();
+        String sql = "SELECT aid,password,lastdate,flag,status FROM admin";
+        super.pstmt = super.conn.prepareStatement(sql);
+        ResultSet rs = super.pstmt.executeQuery();
+        while(rs.next()){
+            Admin vo = new Admin();
+            vo.setAid(rs.getString(1));
+            vo.setPassword(rs.getString(2));
+            vo.setLastdate(rs.getDate(3));
+            vo.setFlag(rs.getInt(4));
+            vo.setStatus(rs.getInt(5));
+            all.add(vo);
+
+        }
+        return all;
     }
 
     @Override

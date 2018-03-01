@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/pages/index.jsp">优乐图书管理系统</a>
+        <a class="navbar-brand" href="/pages/index.jsp">YF图书管理系统</a>
     </div>
     <!--顶部-->
     <div class="header-right">

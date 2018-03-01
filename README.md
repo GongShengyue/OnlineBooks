@@ -12,5 +12,5 @@ JSP+Servlet+Tomcat9.0+IDEA+Mysql
 
 
 ## 运行效果：  
-
+![](./YF.png '运行效果')
 

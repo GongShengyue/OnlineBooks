@@ -28,11 +28,12 @@ public class BooksServiceImpl implements IBooksService{
         try {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("allAdmins",DAOFactory.getAdminDAOInstance(this.dbc.getConn()).findAll());
-            map.put("allItems",DAOFactory.getAdminDAOInstance(this.dbc.getConn()).findAll());
+            map.put("allItems",DAOFactory.getIItemDAOInstance(this.dbc.getConn()).findAll());
             return map;
         }catch (Exception e){
             throw e;
         }finally {
+            this.dbc.close();
 
         }
     }

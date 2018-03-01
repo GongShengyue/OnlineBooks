@@ -23,7 +23,7 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO{
         super.pstmt.setInt(1,vo.getItem().getIid());
         super.pstmt.setString(2,vo.getAdmin().getAid());
         super.pstmt.setString(3,vo.getName());
-        super.pstmt.setTimestamp(4,(Timestamp)vo.getCredate());
+        super.pstmt.setTimestamp(4, new Timestamp(vo.getCredate().getTime()));
         super.pstmt.setInt(5,vo.getStatus());
         super.pstmt.setString(6,vo.getNote());
         return super.pstmt.executeUpdate()>0;

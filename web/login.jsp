@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="<%=basePath%>">
-    <title>优乐图书管理系统</title>
+    <title>YF图书管理系统</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
@@ -25,7 +25,7 @@
 <div class="container">
     <div class="row text-center " style="padding-top:100px;">
         <div class="col-md-12">
-            <h2>优乐图书管理系统</h2>
+            <h2>YF图书管理系统</h2>
         </div>
     </div>
     <div class="row ">

@@ -57,13 +57,13 @@ public class BooksServlet extends HttpServlet {
             column = "name";
         }
 
-      /*  try {
+       try {
             Map<String,Object> map = ServiceFactory.getIBooksServiceInstance().listBySplit(column,keyWord,currentPage,lineSize);
             request.setAttribute("allBooks",map.get("allBooks"));
             request.setAttribute("allRecorders",map.get("allCounts"));
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
         request.setAttribute("url","/pages/back/books/BooksServlet/listSplit");
         request.setAttribute("currentPage",currentPage);
         request.setAttribute("lineSize",lineSize);

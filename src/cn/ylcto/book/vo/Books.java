@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Books implements Serializable{
-    private Integer iid;
+    private Integer Bid;
     private String name;
     private Date credate;
     private String note;
@@ -14,12 +14,12 @@ public class Books implements Serializable{
     private Item item;//表示一本书属于一个类别 iid
     private Admin admin;//表示图书由谁增加，aid
 
-    public Integer getIid() {
-        return iid;
+    public Integer getBid() {
+        return Bid;
     }
 
-    public void setIid(Integer iid) {
-        this.iid = iid;
+    public void setBid(Integer bid) {
+        Bid = bid;
     }
 
     public String getName() {
@@ -68,5 +68,9 @@ public class Books implements Serializable{
 
     public void setAdmin(Admin admin) {
         this.admin = admin;
+    }
+
+    public void setBid(int bid) {
+        this.Bid = bid;
     }
 }

@@ -20,4 +20,15 @@ public interface IBooksService {
      * @throws Exception
      */
     public Map<String,Object> findByAdminAndItem() throws Exception;
+
+    /**
+     * 定义分页接口类
+     * @param column
+     * @param keyWord
+     * @param currentPage
+     * @param lineSize
+     * @return
+     * @throws Exception
+     */
+    public Map<String,Object> listBySplit(String column,String keyWord,int currentPage,int lineSize) throws Exception;
 }

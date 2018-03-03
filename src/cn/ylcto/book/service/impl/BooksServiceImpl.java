@@ -37,4 +37,18 @@ public class BooksServiceImpl implements IBooksService{
 
         }
     }
+
+    @Override
+    public Map<String, Object> listBySplit(String column, String keyWord, int currentPage, int lineSize) throws Exception {
+        try {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("allBooks", DAOFactory.getIBooksDAOInstance(this.dbc.getConn()).findAllBySplit(column, keyWord, currentPage, lineSize));
+            map.put("allCounts", DAOFactory.getIBooksDAOInstance(this.dbc.getConn()).getAllCount(column, keyWord));
+            return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
 }

@@ -1,13 +1,7 @@
 package cn.ylcto.book.factory;
 
-import cn.ylcto.book.service.IAdminService;
-import cn.ylcto.book.service.IBooksService;
-import cn.ylcto.book.service.IItemService;
-import cn.ylcto.book.service.IMemberService;
-import cn.ylcto.book.service.impl.AdminServiceImpl;
-import cn.ylcto.book.service.impl.BooksServiceImpl;
-import cn.ylcto.book.service.impl.ItemServiceImpl;
-import cn.ylcto.book.service.impl.MemberServiceImpl;
+import cn.ylcto.book.service.*;
+import cn.ylcto.book.service.impl.*;
 import cn.ylcto.book.servlet.AdminServlet;
 
 //服务层工厂类
@@ -20,5 +14,6 @@ public class ServiceFactory {
     public static IBooksService getIBooksServiceInstance(){
         return new BooksServiceImpl();
     }
+    public static ILenbookService getILenbooksServiceInstance(){return new LenbookServiceImpl();}
 
 }

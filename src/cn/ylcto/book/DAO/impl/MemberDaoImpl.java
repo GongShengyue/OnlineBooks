@@ -7,6 +7,7 @@ import cn.ylcto.util.test.AbstractDAOImpl;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -57,7 +58,17 @@ public class MemberDaoImpl extends AbstractDAOImpl implements IMemberDao{
 
     @Override
     public List<Member> findAll() throws SQLException {
-        return null;
+        List<Member> all = new ArrayList<Member>();
+        String sql = "select mid,name from member";
+        super.pstmt = super.conn.prepareStatement(sql);
+        ResultSet rs =super.pstmt.executeQuery();
+        while(rs.next()){
+            Member vo = new Member();
+            vo.setMid(rs.getString(1));
+            vo.setName(rs.getString(2));
+            all.add(vo);
+        }
+        return all;
     }
 
     @Override

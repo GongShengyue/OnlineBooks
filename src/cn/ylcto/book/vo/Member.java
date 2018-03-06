@@ -1,6 +1,7 @@
 package cn.ylcto.book.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Member implements Serializable{
     private String mid;
@@ -8,7 +9,26 @@ public class Member implements Serializable{
     private Integer age;
     private Integer sex;
     private String phone;
+    private List<Lenbook> Lenbooks;
+
+    public List<Lenbook> getLenbooks() {
+        return Lenbooks;
+    }
+
+    public void setLenbooks(List<Lenbook> lenbooks) {
+        Lenbooks = lenbooks;
+    }
+
+    public String getGetMid() {
+        return getMid;
+    }
+
+    public void setGetMid(String getMid) {
+        this.getMid = getMid;
+    }
+
     public String getMid;
+
 
 
     public String getMid() {

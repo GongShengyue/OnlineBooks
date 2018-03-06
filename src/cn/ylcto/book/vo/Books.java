@@ -13,6 +13,15 @@ public class Books implements Serializable{
     private Integer status;
     private Item item;//表示一本书属于一个类别 iid
     private Admin admin;//表示图书由谁增加，aid
+    private List<Lenbook> Lenbook;//表示可以借多本书
+
+    public List<cn.ylcto.book.vo.Lenbook> getLenbook() {
+        return Lenbook;
+    }
+
+    public void setLenbook(List<cn.ylcto.book.vo.Lenbook> lenbook) {
+        Lenbook = lenbook;
+    }
 
     public Integer getBid() {
         return Bid;

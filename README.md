@@ -7,8 +7,10 @@
 *  登记图书借出信息  
 
 ## 技术栈：
-JSP+Servlet+Tomcat9.0+IDEA+Mysql  
-前台登录验证使用框架，
+
+JSP+Servlet+Tomcat9.0+IDEA+Mysql 
+前台登录验证使用框架
+数据库脚本包括登录用户名和密码已经写在了**数据库脚本.sql** 中
 
 
 ## 运行效果：  

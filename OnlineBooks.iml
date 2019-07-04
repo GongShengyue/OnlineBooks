@@ -23,44 +23,44 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../ja/itcast-tools-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/ja/itcast-tools-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../ja/itcast-tools-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/ja/itcast-tools-1.4.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-beanutils-1.8.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-beanutils-1.8.3.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-dbutils-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-dbutils-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-dbutils-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-dbutils-1.4.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-logging-1.1.1.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-logging-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../ja/commons-logging-1.1.1.jar!/" />
+          <root url="jar://$USER_HOME$/ja/commons-logging-1.1.1.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -84,5 +84,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

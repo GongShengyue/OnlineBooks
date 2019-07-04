@@ -74,7 +74,7 @@ public class AdminDAOImpl extends AbstractDAOImpl implements IAdminDAO{
             Admin vo = new Admin();
             vo.setAid(rs.getString(1));
             vo.setPassword(rs.getString(2));
-            vo.setLastdate(rs.getDate(3));
+            vo.setLastdate(rs.getTimestamp(3));
             vo.setFlag(rs.getInt(4));
             vo.setStatus(rs.getInt(5));
             all.add(vo);

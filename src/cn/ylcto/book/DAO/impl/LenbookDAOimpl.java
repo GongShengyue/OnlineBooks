@@ -20,7 +20,7 @@ public class LenbookDAOimpl extends AbstractDAOImpl implements ILenbookDAO{
         String sql = "INSERT INTO lenbook(bid,mid,credate) VALUES(?,?,?)";
         super.pstmt = super.conn.prepareStatement(sql);
         super.pstmt.setInt(1,vo.getBooks().getBid());
-        super.pstmt.setString(2,vo.getMenmber().getMid );
+        super.pstmt.setString(2,vo.getMember().getMid );
         super.pstmt.setTimestamp(3,new Timestamp(vo.getCredate().getTime()));
 
         return super.pstmt.executeUpdate()>0;

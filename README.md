@@ -14,6 +14,8 @@ JSP+Servlet+Tomcat9.0+IDEA+Mysql
 
 数据库脚本包括登录用户名和密码已经写在了**数据库脚本.sql** 中
 
+解压“需要的jar包”添加到项目的dependency中
+
 
 ## 运行效果：  
 ![](./web/YF.png '运行效果')
